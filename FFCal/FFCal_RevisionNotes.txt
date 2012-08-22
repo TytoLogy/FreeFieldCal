@@ -1,0 +1,39 @@
+% FFCAL_RevisionNotes.txt
+
+______________________________________________________________________________________
+16 April, 2009:
+
+	Adding some functions to FFCal
+		- FFCal_ToneResponse.m will measure response of tones to check the calibration
+		- FFCal_ProcessGolay.m will process the response of each trial (since
+			we need these data for FFCal_ToneResponse!!!!)
+
+		Still need to go through and make sure things are working
+
+		in particular, something needs to be done to get the caldata for each speaker to
+		be used for the ToneResponse part.
+
+		also, add some way to test amplitude variation?
+
+______________________________________________________________________________________
+
+______________________________________________________________________________________
+1 June, 2009:
+	Finished basics of FFCal_ToneResponse.m
+	
+	Added FFCal_SPLbandwidth.m to test/measure variation of SPL with bandwidth of 
+	synthesized noise.  Narrowband sound or tones has higher rms value, and hence
+	greater SPL, than broadband noise.  This is most likely due to the properties 
+	RMS operation.  Need to figure out a way to correct for this.
+______________________________________________________________________________________
+
+______________________________________________________________________________________
+2 June, 2009:
+	Should make note of the different variables in FFCal:
+
+	speakercal (struct)
+	caldata	(struct)
+	cal		(struct)
+
+
+______________________________________________________________________________________
